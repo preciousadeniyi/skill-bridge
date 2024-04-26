@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Skilled Workers</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Enhanced Navbar Design */
+.navbar {
+    background: linear-gradient(45deg, #4a0480 0%, #4a0480 100%);/* Gradient background */
+    padding: 0.8rem 2rem; /* Spacious padding for a better look */
+    border-bottom: 3px solid #ffc107; /* Accent border */
+}
+
+.navbar-brand {
+    font-size: 1.8rem; /* Larger brand font */
+    color: #fff; /* White text for brand */
+    font-weight: bold; /* Bold font for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-brand:hover {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+.navbar-toggler {
+    border: 2px solid #fff; /* White border for the toggle button */
+    border-radius: 0.25rem; /* Rounded corners for the toggle */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom SVG for the toggler icon */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text for nav links */
+    font-weight: 500; /* Medium weight for readability */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffc107; /* Highlight color for the active page */
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 1rem; /* Adjust padding for mobile view */
+    }
+}
+
+
+
+
+
+/* Enhanced Hero Image Design */
+.hero-image {
+    /* background: linear-gradient(to right, #6a11cb, #2575fc), url('hero-image.jpg') no-repeat center center / cover; */
+    background: linear-gradient(to right, #ff5251, #ff4081), url('hero-image.jpg') no-repeat center center;
+    height: 75vh; /* Larger height for a grander appearance */
+    color: #fff; /* White text for better contrast */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+/* Hero Text Styling */
+.hero-text h1 {
+    font-size: 3rem; /* Larger font size for the main title */
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.5rem; /* Larger font size for the subtitle */
+    margin-bottom: 1.5rem;
+}
+
+/* Call to Action Button Styling */
+.cta-button {
+    background-color: #ff5722; /* Vibrant orange for the CTA button */
+    color: #fff; /* White text for contrast */
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1.2rem; /* Larger font size */
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight increase in size */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller devices */
+    }
+
+    .hero-text p {
+        font-size: 1.2rem; /* Adjust font size for smaller devices */
+    }
+
+    .cta-button {
+        padding: 10px 25px; /* Adjust padding for smaller devices */
+        font-size: 1rem; /* Adjust font size for smaller devices */
+    }
+}
+
+
+
+/* Featured Workers Section Enhancements */
+.featured-workers {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f7f7f7; /* Light grey background for a subtle contrast */
+}
+
+.featured .row {
+    justify-content: center;
+    gap: 20px;
+}
+
+.featured .card {
+    background: #fff;
+    border: 1px solid #ddd; /* Add a border for definition */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+.featured .card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Shadow effect for depth */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+.featured .card-img-top {
+    width: 100%; /* Ensure the image covers the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 5px solid goldenrod; /* Accent border matching the navbar */
+}
+
+.featured .card-body {
+    padding: 20px;
+}
+
+.featured .btn-primary {
+    background-color: goldenrod; /* Match the vibrant cyan of the navbar */
+    border-color: gold;
+}
+
+/* Latest Job Listings Section Enhancements */
+.job-listings {
+    /* background-color: #fff; White background for a clean look */
+    background: linear-gradient(45deg, violet 0%, goldenrod 100%); 
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.job-listings h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white; /* Deep purple for a pop of color */
+}
+
+.list-group-item {
+    margin-bottom: 10px; /* Space out the listings */
+    border-left: 5px solid #ff9800; /* Accent border for visibility */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.list-group-item-action:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    border-left-color: #f44336; /* Change border color on hover */
+}
+
+.list-group-item h5 {
+    color: #333; /* Dark grey for readability */
+}
+
+.list-group-item small {
+    color: #666; /* Lighter grey for a subtle look */
+}
+
+.list-group-item p {
+    color: #333; /* Consistent text color for descriptions */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .featured .col-md-4, .job-listings .list-group-item {
+        margin-bottom: 20px; /* Increase spacing on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo with adjusted size and alignment -->
+        <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+          <img src="skill.jpg" alt="Service Marketplace Logo" style="max-height: 100px; width: auto;">
+        </a>
+        
+        <!-- Toggler button for mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Connecting Skilled Workers to Opportunities</h1>
+    <p>Find the right person for the job or get hired for your expertise</p>
+    <a href="register.html" class="btn btn-primary cta-button">Join Now</a>
+  </div>
+</div>
+
+<div class="container text-center my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="how-it-works">How It Works</h3>
+      <p>Learn how our platform can help you find work or hire skilled professionals.</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="benefits">Benefits</h3>
+      <p>Discover the advantages of using our service for your business or personal projects.</p>
+    </div>
+    <div class="col-md-4" >
+      <h3 class="how-it-works">Testimonials</h3>
+      <p>Hear from our satisfied users about their experiences with our marketplace.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container featured">
+  <h2 class="featured-workers">Featured Workers</h2>
+  <!-- Add featured workers here -->
+  <!-- Repeat for more workers -->
+<div class="row">
+    <!-- Worker Profile 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="worker4-image.jpg" alt="Worker Name 1">
+        <div class="card-body">
+          <h5 class="card-title">Worker Name 1</h5>
+          <p class="card-text">Brief description of skills and experience for Worker 1.</p>
+          <a href="#" class="btn btn-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+    <!-- Worker Profile 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="worker2-image.jpg" alt="Worker Name 2">
+        <div class="card-body">
+          <h5 class="card-title">Worker Name 2</h5>
+          <p class="card-text">Brief description of skills and experience for Worker 2.</p>
+          <a href="#" class="btn btn-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+    <!-- Worker Profile 3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="worker3.jpg" alt="Worker Name 3">
+        <div class="card-body">
+          <h5 class="card-title">Worker Name 3</h5>
+          <p class="card-text">Brief description of skills and experience for Worker 3.</p>
+          <a href="#" class="btn btn-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add more rows as needed for additional workers -->
+  
+    <!-- Repeat for more workers -->
+  </div>
+</div>
+
+<div class="container job-listings">
+  <h2 class="job-listings">Latest Job Listings</h2>
+  <!-- Add job listings here -->
+  <div class="list-group">
+    <!-- Example Job Listing -->
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Job Title</h5>
+        <small>3 days ago</small>
+      </div>
+      <p class="mb-1">Job description and requirements.</p>
+      <small>Location: City, Country</small>
+    </a>
+    <!-- Repeat for more job listings -->
+  </div>
+</div>
+
+<footer class="footer" style="background-color: #282c34; color: white; padding: 20px; text-align: center;">
+    <p style="margin: 0; font-size: 1.2em; font-weight: bold;">Connect with Us</p>
+    <div style="margin-top: 10px;">
+      <a href="#" style="color: goldenrod; text-decoration: none; margin-right: 15px;">About</a>
+      <a href="#" style="color: goldenrod; text-decoration: none; margin-right: 15px;">Contact</a>
+      <a href="#" style="color: goldenrod; text-decoration: none;">Social Media</a>
+    </div>
+  </footer>
+  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

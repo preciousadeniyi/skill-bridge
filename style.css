@@ -1,0 +1,161 @@
+/* main.css - Colorful and Innovative Design with Animations */
+
+/* Base styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #00bcd4; /* Vibrant cyan for the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hero image styles */
+.hero-image {
+    background: linear-gradient(to right, #ff5251, #ff4081), url('hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 60vh; /* Adjusted height for better visibility */
+    color: #fff; /* White text for contrast */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflowing gradient */
+}
+
+/* Hero text styles */
+.hero-text {
+    text-align: center;
+    max-width: 600px; /* Limit text width for readability */
+}
+
+/* Call-to-action button styles */
+.cta-button {
+    background-color:linear-gradient(to right, #ffc107,yellowgreen);/* Vibrant yellow for the CTA button */
+    background-color: yellowgreen;
+    color: #333; /* Dark text for contrast */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* CTA button hover effect */
+.cta-button:hover {
+    background-color: #ff9800; /* Darker orange on hover */
+    color: white; /* White text */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Featured and job listings section styles */
+.featured, .job-listings {
+    padding: 60px 0;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 30px; /* Spacing between cards */
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #673ab7; /* Footer color matches navbar */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* Section title styles */
+.section-title {
+    font-size: 2.5rem;
+    color: #00bcd4; /* Matching the navbar color */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Section title underline effect */
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #ffc107; /* Vibrant yellow underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* How It Works section styles */
+.how-it-works {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Benefits section styles */
+.benefits {
+    background-color: #e3f2fd; /* Light blue background */
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+/* Testimonials section styles */
+.testimonials {
+    background-color: #fce4ec; /* Light pink background */
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Featured Workers section styles */
+.featured-workers {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+/* Job Listings section styles */
+.job-listings {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General styling for all sections */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Animations for hover effects on cards */
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Slightly enlarge image */
+    opacity: 0.9; /* Slightly transparent */
+}
+
+.card:hover .card-body {
+    background-color: #00bcd4; /* Change card body background on hover */
+    color: #fff; /* White text for contrast */
+}
